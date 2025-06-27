@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+* {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey700: hsl(0, 0%, 20%);
+    --grey800: hsl(0, 0%, 12%);
+    --grey900: hsl(0, 0%, 8%);
+    
+    color: var(--white);
+    font-family: "Inter";
+    font-size: 14px;
+    margin: 0; 
+    padding: 0;
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -8,6 +22,77 @@ body {
     flex-direction: column;
     margin: 0;
     border: 0;
+    background-color: var(--grey900);
+}
+
+.profile {
+    background-color: var(--grey800);
+    width: min(295px, 90vw);
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .profile {
+    padding: 10px;
+  }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info img {
+    border-radius: 50%;
+    height: 75px;
+    margin-bottom: 30px;
+}
+
+.info h3 {
+    margin-bottom: 10px;
+}
+
+.info p {
+    margin: 20px 0px 10px 0px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    background-color: var(--grey700);
+    width: 100%;
+    padding: 15px 0px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--grey700);
+    background-color: var(--green);
+}
+
+.preset1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.preset2 {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.preset3bold {
+    font-weight: 600;
 }
 
 .attribution {
@@ -17,5 +102,11 @@ body {
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%); 
+    color: rgba(255, 255, 255, 0.456); 
+    font-size: 11px; 
+}
+
+.attribution a:hover {
+    color: var(--grey700); 
+    font-size: 11px; 
 }
